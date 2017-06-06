@@ -10,30 +10,30 @@ namespace Micro\Cache\Adapter;
 use Micro\Cache\AdapterInterface;
 
 
-class ArrayCacheAdapter implements AdapterInterface
+class DummyCacheAdapter implements AdapterInterface
 {
     public function has($key)
     {
-        // TODO: Implement has() method.
+        return true;
     }
 
     public function get($key, $default = null)
     {
-        // TODO: Implement get() method.
+        return $default;
     }
 
     public function set($key, $value, $ttl = null)
     {
-        // TODO: Implement set() method.
+        //return true;
     }
 
     public function delete($key)
     {
-        // TODO: Implement delete() method.
+        //return true;
     }
 
     public function clear()
     {
-        // TODO: Implement clear() method.
+        return;
     }
 }

@@ -11,8 +11,8 @@ namespace Micro\Cache;
 interface AdapterInterface
 {
     public function has($key);
-    public function get($key);
-    public function set($key, $value, $ttl);
+    public function get($key, $default = null);
+    public function set($key, $value, $ttl = null);
     public function delete($key);
     public function clear();
 }
