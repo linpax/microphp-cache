@@ -1,0 +1,42 @@
+{
+  "name": "linpax/microphp-cache",
+  "description": "MicroPHP cache component",
+  "type": "library",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "keywords": [
+    "microphp",
+    "cache"
+  ],
+  "authors": [
+    {
+      "name": "Zcasper",
+      "email": "testuser@mail.linpax.org"
+    }
+  ],
+  "support": {
+    "email": "testuser@mail.linpax.org",
+    "issues": "https://trello.com/b/Zqwf5gYP/microphp",
+    "forum": "http://forum.micro.linpax.org/",
+    "wiki": "http://wiki.micro.linpax.org/",
+    "source": "https://github.com/lugnsk/micro"
+  },
+  "suggest": {
+    "ext-curl": "required",
+    "ext-pdo": "required",
+    "ext-pdo_mysql": "required"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "ext-mbstring": "*",
+    "lib-pcre": ">=8.31",
+    "psr/cache": "^1.0@dev",
+    "roave/security-advisories": "dev-master",
+    "psr/simple-cache": "^1.0@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Micro\\Cache\\": ""
+    }
+  }
+}
