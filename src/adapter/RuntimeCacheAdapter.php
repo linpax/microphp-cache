@@ -10,7 +10,7 @@ namespace Micro\Cache\Adapter;
 use Micro\Cache\AdapterInterface;
 
 
-class ArrayCacheAdapter implements AdapterInterface
+class RuntimeCacheAdapter implements AdapterInterface
 {
     private $arr = [];
 
