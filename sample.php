@@ -9,7 +9,7 @@
 include __DIR__ . '/vendor/autoload.php';
 include __DIR__ . '/src/AdapterInterface.php';
 include __DIR__ . '/src/adapter/DummyCacheAdapter.php';
-include __DIR__ . '/src/adapter/ArrayCacheAdapter.php';
+include __DIR__ . '/src/adapter/RuntimeCacheAdapter.php';
 include __DIR__ . '/src/Cache.php';
 include __DIR__ . '/src/PoolCache.php';
 include __DIR__ . '/src/PoolCacheItem.php';
@@ -23,7 +23,7 @@ echo 'get: ' . $cacheDummy->get('partial', 123) . PHP_EOL;
 echo 'has: ' . print_r($cacheDummy->has('partial'), true) . PHP_EOL;
 echo PHP_EOL;
 
-$arr = new \Micro\Cache\Adapter\ArrayCacheAdapter();
+$arr = new \Micro\Cache\Adapter\RuntimeCacheAdapter();
 $cacheArr = new \Micro\Cache\Cache($arr);
 
 echo 'Array test' . PHP_EOL;
