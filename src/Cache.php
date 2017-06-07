@@ -1,8 +1,8 @@
 <?php
 /**
- * @link https://github.com/linpax/microphp-framework
+ * @link https://github.com/linpax/microphp-cache
  * @copyright Copyright &copy; 2017 Oleg Lunegov
- * @license https://github.com/linpax/microphp-framework/blob/master/LICENSE
+ * @license https://github.com/linpax/microphp-cache/blob/master/LICENSE
  */
 
 namespace Micro\Cache;
@@ -21,6 +21,9 @@ class Cache implements CacheInterface
 
     public function __construct(AdapterInterface $adapter)
     {
+        if (!($adapter instanceof AdapterInterface)){
+            throw new Exception('Adapter must implement AdapterInterface');
+        }
         $this->adapter = $adapter;
     }
     public function pool($prefix)
