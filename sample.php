@@ -6,14 +6,8 @@
  */
 
 
-include __DIR__ . '/vendor/autoload.php';
-include __DIR__ . '/src/Exception.php';
-include __DIR__ . '/src/AdapterException.php';
-include __DIR__ . '/src/AdapterInterface.php';
-include __DIR__ . '/src/adapter/Dummy.php';
-include __DIR__ . '/src/adapter/Runtime.php';
-include __DIR__ . '/src/adapter/Memcached.php';
-include __DIR__ . '/src/Cache.php';
+/** @var Composer\Autoload\ClassLoader $autoload */
+$autoload = include __DIR__ . '/vendor/autoload.php';
 
 $dummy = new \Micro\Cache\Adapter\Dummy();
 $cacheDummy = new \Micro\Cache\Cache($dummy);
