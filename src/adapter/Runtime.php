@@ -1,8 +1,8 @@
 <?php
 /**
- * @link https://github.com/linpax/microphp-framework
+ * @link https://github.com/linpax/microphp-cache
  * @copyright Copyright &copy; 2013 Oleg Lunegov
- * @license https://github.com/linpax/microphp-framework/blob/master/LICENSE
+ * @license https://github.com/linpax/microphp-cache/blob/master/LICENSE
  */
 
 namespace Micro\Cache\Adapter;
@@ -10,7 +10,7 @@ namespace Micro\Cache\Adapter;
 use Micro\Cache\AdapterInterface;
 
 
-class RuntimeCacheAdapter implements AdapterInterface
+class Runtime implements AdapterInterface
 {
     private $arr = [];
 
