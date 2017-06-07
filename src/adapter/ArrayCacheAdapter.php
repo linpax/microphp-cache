@@ -12,28 +12,35 @@ use Micro\Cache\AdapterInterface;
 
 class ArrayCacheAdapter implements AdapterInterface
 {
+    private $arr = [];
+
     public function has($key)
     {
-        // TODO: Implement has() method.
+        return array_key_exists($key, $this->arr);
     }
 
     public function get($key, $default = null)
     {
-        // TODO: Implement get() method.
+        return $this->has($key) ? $this->arr[$key] : $default;
     }
 
     public function set($key, $value, $ttl = null)
     {
-        // TODO: Implement set() method.
+        $arr = $this->arr;
+        $arr[$key] = $value;
+
+        $this->arr = $arr;
     }
 
     public function delete($key)
     {
-        // TODO: Implement delete() method.
+        if (array_key_exists($key, $this->arr)) {
+            unset($this->arr[$key]);
+        }
     }
 
     public function clear()
     {
-        // TODO: Implement clear() method.
+        $this->arr = [];
     }
 }
