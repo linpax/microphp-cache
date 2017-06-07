@@ -21,14 +21,7 @@ class Cache implements CacheInterface
 
     public function __construct(AdapterInterface $adapter)
     {
-        if (!($adapter instanceof AdapterInterface)){
-            throw new Exception('Adapter must implement AdapterInterface');
-        }
         $this->adapter = $adapter;
-    }
-    public function pool($prefix)
-    {
-        return new PoolCache($prefix, $this->adapter); // todo: hard link
     }
 
 

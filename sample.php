@@ -14,8 +14,6 @@ include __DIR__ . '/src/adapter/Dummy.php';
 include __DIR__ . '/src/adapter/Runtime.php';
 include __DIR__ . '/src/adapter/Memcached.php';
 include __DIR__ . '/src/Cache.php';
-include __DIR__ . '/src/PoolCache.php';
-include __DIR__ . '/src/PoolCacheItem.php';
 
 $dummy = new \Micro\Cache\Adapter\Dummy();
 $cacheDummy = new \Micro\Cache\Cache($dummy);
