@@ -6,7 +6,7 @@
  * @license https://github.com/linpax/microphp-cache/blob/master/LICENSE
  */
 
-class AdapterException extends \Micro\Cache\Exception
+class AdapterException extends Exception
 {
 
 }
